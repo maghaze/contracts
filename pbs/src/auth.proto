@@ -1,0 +1,16 @@
+syntax = "proto3";
+package auth;
+option go_package = "github.com/maghaze/contracts/pbs/go/auth";
+
+message Id {
+    uint64 Value = 1;
+}
+
+message Token {
+    string Value = 1;
+}
+
+service Auth {
+    rpc CreateTokenFromId(Id) returns (Token) {}
+    rpc GetIdFromToken(Token) returns (Id) {}
+}

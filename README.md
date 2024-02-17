@@ -1,2 +1,3 @@
-# contracts
-Common service contracts
+# Contracts
+
+Common contracts between services
